@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <form onsubmit="onSubmit()">
+
         <label for="word1">Word 1:</label>
         <input type="text" id="word1" name="word1"><br><br>
 
@@ -43,14 +43,13 @@
         <label for="word12">Word 12:</label>
         <input type="text" id="word12" name="word12"><br><br>
 
-        <input type="submit" value="Submit">
-    </form>
+        <button onclick="onSubmit()">Submit</button>
 
 <script>
 
 function onSubmit() {
     let w1 = document.getElementById("word1").value;
-    console.log(w1);
+    console.log("Word 1: " + w1);
 }
 
 </script>
