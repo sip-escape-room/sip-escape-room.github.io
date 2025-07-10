@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <form onsubmit="checkAnswers()">
+    <form onsubmit="onSubmit()">
         <label for="word1">Word 1:</label>
         <input type="text" id="word1" name="word1"><br><br>
 
@@ -47,17 +47,21 @@
     </form>
 
 <script>
-function checkAnswers() {
 
+function onSubmit() {
     let w1 = document.getElementById("word1").value;
+    console.log(w1);
+}
 
+function checkAnswers() {
+    let w1 = document.getElementById("word1").value;
     if (w1 == 'one') {
         alert('Correct')
     } else {
         alert('Wrong')
     }
-
 }
+
 </script>
 
 </body>
