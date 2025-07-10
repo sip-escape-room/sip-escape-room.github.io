@@ -1,0 +1,12 @@
+export const ans1 = 'one';
+export const ans2 = 'two';
+export const ans3 = 'three';
+export const ans4 = 'four';
+export const ans5 = 'five';
+export const ans6 = 'six';
+export const ans7 = 'seven';
+export const ans8 = 'eight';
+export const ans9 = 'nine';
+export const ans10 = 'ten';
+export const ans11 = 'eleven';
+export const ans12 = 'twelve';

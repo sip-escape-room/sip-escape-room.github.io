@@ -81,6 +81,9 @@ input {
 
 <script>
 
+//import { ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11, ans12 } from './answers.js';
+import { ans1 } from './answers.js';
+
 function onSubmit() {
 
     let inputs = document.querySelectorAll("input");
@@ -117,7 +120,7 @@ function checkAnswers() {
     let w11 = document.getElementById("word11").value.toLowerCase();
     let w12 = document.getElementById("word12").value.toLowerCase();
 
-    if (w1 == 'one') {
+    if (w1 == ans1) {
         document.getElementById("check1").innerHTML = "✔️";
     } else {
         document.getElementById("check1").innerHTML = "❌";
