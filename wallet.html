@@ -8,48 +8,81 @@
 <body>
 
         <label for="word1">Word 1:</label>
-        <input type="text" id="word1" name="word1"><br><br>
+        <input type="text" id="word1" name="word1">
+        <span id="check1"></span>
+        <br><br>
 
         <label for="word2">Word 2:</label>
-        <input type="text" id="word2" name="word2"><br><br>
+        <input type="text" id="word2" name="word2">
+        <br><br>
 
         <label for="word3">Word 3:</label>
-        <input type="text" id="word3" name="word3"><br><br>
+        <input type="text" id="word3" name="word3">
+        <br><br>
 
         <label for="word4">Word 4:</label>
-        <input type="text" id="word4" name="word4"><br><br>
+        <input type="text" id="word4" name="word4">
+        <br><br>
 
         <label for="word5">Word 5:</label>
-        <input type="text" id="word5" name="word5"><br><br>
+        <input type="text" id="word5" name="word5">
+        <br><br>
 
         <label for="word6">Word 6:</label>
-        <input type="text" id="word6" name="word6"><br><br>
+        <input type="text" id="word6" name="word6">
+        <br><br>
 
         <label for="word7">Word 7:</label>
-        <input type="text" id="word7" name="word7"><br><br>
+        <input type="text" id="word7" name="word7">
+        <br><br>
 
         <label for="word8">Word 8:</label>
-        <input type="text" id="word8" name="word8"><br><br>
+        <input type="text" id="word8" name="word8">
+        <br><br>
 
         <label for="word9">Word 9:</label>
-        <input type="text" id="word9" name="word9"><br><br>
+        <input type="text" id="word9" name="word9">
+        <br><br>
 
         <label for="word10">Word 10:</label>
-        <input type="text" id="word10" name="word10"><br><br>
+        <input type="text" id="word10" name="word10">
+        <br><br>
 
         <label for="word11">Word 11:</label>
-        <input type="text" id="word11" name="word11"><br><br>
+        <input type="text" id="word11" name="word11">
+        <br><br>
 
         <label for="word12">Word 12:</label>
-        <input type="text" id="word12" name="word12"><br><br>
+        <input type="text" id="word12" name="word12">
+        <br><br>
 
         <button onclick="onSubmit()">Submit</button>
 
 <script>
 
 function onSubmit() {
+
     let w1 = document.getElementById("word1").value;
+    let w2 = document.getElementById("word2").value;
+    let w3 = document.getElementById("word3").value;
+    let w4 = document.getElementById("word4").value;
+    let w5 = document.getElementById("word5").value;
+    let w6 = document.getElementById("word6").value;
+    let w7 = document.getElementById("word7").value;
+    let w8 = document.getElementById("word8").value;
+    let w9 = document.getElementById("word9").value;
+    let w10 = document.getElementById("word10").value;
+    let w11 = document.getElementById("word11").value;
+    let w12 = document.getElementById("word12").value;
+
     console.log("Word 1: " + w1);
+
+    if (w1 == 'one') {
+        document.getElementById("check1").innerHTML = "✔️";
+    } else {
+        document.getElementById("check1").innerHTML = "❌";
+    }
+
 }
 
 </script>
