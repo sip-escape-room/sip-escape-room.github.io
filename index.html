@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Placeholder</title>
+  <style>
+    /* make it fill the viewport and center everything */
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: navy;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* header in nice font, top-center */
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    /* rounded square button with icon */
+    .btn {
+      background-color: white;
+      color: navy;
+      border: none;
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .btn img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Placeholder</h1>
+  <button class="btn" onclick="location.href='/restore'">
+    <!-- swap in any 24×24 SVG/PNG you like -->
+    <img src="https://cdn-icons-png.flaticon.com/512/2089/2089176.png" alt="icon"/>
+    Placeholder
+  </button>
+</body>
+</html>
