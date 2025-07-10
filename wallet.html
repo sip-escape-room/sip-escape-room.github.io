@@ -7,8 +7,43 @@
 
 <style>
 
+body {
+    background-color: #121212;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+    border-radius: 8px;
+    background-color: #2b2b2b;
+    display: grid;
+    justify-content: space-evenly;
+}
+
 input {
-    text-transform: lowercase
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 8rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #424242;
+    color: white;
+}
+
+input:focus {
+    outline: thin solid;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
 }
 
 </style>
@@ -17,67 +52,59 @@ input {
 
 <body>
 
-        <label for="word1">Word 1:</label>
-        <input type="text" id="word1" name="word1">
-        <span id="check1"></span>
-        <br><br>
+    <div class="container">
 
-        <label for="word2">Word 2:</label>
-        <input type="text" id="word2" name="word2">
-        <span id="check2"></span>
-        <br><br>
+        <h1>Enter your 12-Word Recovery Phrase</h1>
 
-        <label for="word3">Word 3:</label>
-        <input type="text" id="word3" name="word3">
-        <span id="check3"></span>
-        <br><br>
+        <div class="rowA">
 
-        <label for="word4">Word 4:</label>
-        <input type="text" id="word4" name="word4">
-        <span id="check4"></span>
-        <br><br>
+            <input type="text" id="word1" placeholder="1">
+            <span id="check1"></span>
 
-        <label for="word5">Word 5:</label>
-        <input type="text" id="word5" name="word5">
-        <span id="check5"></span>
-        <br><br>
+            <input type="text" id="word2" placeholder="2">
+            <span id="check2"></span>
 
-        <label for="word6">Word 6:</label>
-        <input type="text" id="word6" name="word6">
-        <span id="check6"></span>
-        <br><br>
+            <input type="text" id="word3" placeholder="3">
+            <span id="check3"></span>
 
-        <label for="word7">Word 7:</label>
-        <input type="text" id="word7" name="word7">
-        <span id="check7"></span>
-        <br><br>
+            <input type="text" id="word4" placeholder="4">
+            <span id="check4"></span>
 
-        <label for="word8">Word 8:</label>
-        <input type="text" id="word8" name="word8">
-        <span id="check8"></span>
-        <br><br>
+            <input type="text" id="word5" placeholder="5">
+            <span id="check5"></span>
 
-        <label for="word9">Word 9:</label>
-        <input type="text" id="word9" name="word9">
-        <span id="check9"></span>
-        <br><br>
+            <input type="text" id="word6" placeholder="6">
+            <span id="check6"></span>
 
-        <label for="word10">Word 10:</label>
-        <input type="text" id="word10" name="word10">
-        <span id="check10"></span>
-        <br><br>
+        </div><!-- end of rowA -->
 
-        <label for="word11">Word 11:</label>
-        <input type="text" id="word11" name="word11">
-        <span id="check11"></span>
-        <br><br>
+        <div class="rowB">
 
-        <label for="word12">Word 12:</label>
-        <input type="text" id="word12" name="word12">
-        <span id="check12"></span>
-        <br><br>
+            <input type="text" id="word7" placeholder="7">
+            <span id="check7"></span>
+
+            <input type="text" id="word8" placeholder="8">
+            <span id="check8"></span>
+
+            <input type="text" id="word9" placeholder="9">
+            <span id="check9"></span>
+
+            <input type="text" id="word10" placeholder="10">
+            <span id="check10"></span>
+
+            <input type="text" id="word11" placeholder="11">
+            <span id="check11"></span>
+
+            <input type="text" id="word12" placeholder="12">
+            <span id="check12"></span>
+
+        </div><!-- end of rowB -->
 
         <button onclick="onSubmit()">Submit</button>
+
+    </div><!-- end of container -->
+
+<!-- end of body -->
 
 <script>
 
