@@ -14,46 +14,57 @@
 
         <label for="word2">Word 2:</label>
         <input type="text" id="word2" name="word2">
+        <span id="check2"></span>
         <br><br>
 
         <label for="word3">Word 3:</label>
         <input type="text" id="word3" name="word3">
+        <span id="check3"></span>
         <br><br>
 
         <label for="word4">Word 4:</label>
         <input type="text" id="word4" name="word4">
+        <span id="check4"></span>
         <br><br>
 
         <label for="word5">Word 5:</label>
         <input type="text" id="word5" name="word5">
+        <span id="check5"></span>
         <br><br>
 
         <label for="word6">Word 6:</label>
         <input type="text" id="word6" name="word6">
+        <span id="check6"></span>
         <br><br>
 
         <label for="word7">Word 7:</label>
         <input type="text" id="word7" name="word7">
+        <span id="check7"></span>
         <br><br>
 
         <label for="word8">Word 8:</label>
         <input type="text" id="word8" name="word8">
+        <span id="check8"></span>
         <br><br>
 
         <label for="word9">Word 9:</label>
         <input type="text" id="word9" name="word9">
+        <span id="check9"></span>
         <br><br>
 
         <label for="word10">Word 10:</label>
         <input type="text" id="word10" name="word10">
+        <span id="check10"></span>
         <br><br>
 
         <label for="word11">Word 11:</label>
         <input type="text" id="word11" name="word11">
+        <span id="check11"></span>
         <br><br>
 
         <label for="word12">Word 12:</label>
         <input type="text" id="word12" name="word12">
+        <span id="check12"></span>
         <br><br>
 
         <button onclick="onSubmit()">Submit</button>
@@ -61,6 +72,27 @@
 <script>
 
 function onSubmit() {
+
+    let inputs = document.querySelectorAll("input");
+
+    let emptyInputs = false;
+
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value == '' || inputs[i].value == null) {
+            emptyInputs = true;
+            break;
+        }
+    }
+
+    if (emptyInputs) {
+        alert('There are empty input fields')
+    } else {
+        checkAnswers()
+    }
+
+}
+
+function checkAnswers() {
 
     let w1 = document.getElementById("word1").value;
     let w2 = document.getElementById("word2").value;
@@ -74,8 +106,6 @@ function onSubmit() {
     let w10 = document.getElementById("word10").value;
     let w11 = document.getElementById("word11").value;
     let w12 = document.getElementById("word12").value;
-
-    console.log("Word 1: " + w1);
 
     if (w1 == 'one') {
         document.getElementById("check1").innerHTML = "✔️";
