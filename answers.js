@@ -1,12 +1,14 @@
-export const ans1 = 'one';
-export const ans2 = 'two';
-export const ans3 = 'three';
-export const ans4 = 'four';
-export const ans5 = 'five';
-export const ans6 = 'six';
-export const ans7 = 'seven';
-export const ans8 = 'eight';
-export const ans9 = 'nine';
-export const ans10 = 'ten';
-export const ans11 = 'eleven';
-export const ans12 = 'twelve';
+const ans1 = 'one';
+const ans2 = 'two';
+const ans3 = 'three';
+const ans4 = 'four';
+const ans5 = 'five';
+const ans6 = 'six';
+const ans7 = 'seven';
+const ans8 = 'eight';
+const ans9 = 'nine';
+const ans10 = 'ten';
+const ans11 = 'eleven';
+const ans12 = 'twelve';
+
+export { ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11, ans12 };
