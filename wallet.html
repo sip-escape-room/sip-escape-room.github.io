@@ -172,12 +172,12 @@ function checkAnswers() {
 
     } // for loop
 
-    console.log(isCorrect);
-
     let allCorrect = isCorrect.every(v => v === true);
-    console.log(allCorrect);
-    alert("Success!");
-    location.href = "/success";
+
+    if (allCorrect) {
+        alert("Success!");
+        location.href = "/success";
+    }
 
 } // function checkAnswers
 
