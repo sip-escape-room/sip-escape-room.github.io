@@ -179,7 +179,9 @@ function checkAnswers() {
             document.getElementById(`word${i}`).readOnly = true;
         }
         document.getElementById("submit").innerHTML = "🔓";
-        document.getElementById("submit").onclick = "location.href='/success'";
+        document.getElementById("submit").onclick = function() {
+            location.href = "/success"
+        };
         alert("Success!");
     }
 
