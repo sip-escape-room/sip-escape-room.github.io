@@ -175,8 +175,12 @@ function checkAnswers() {
     let allCorrect = isCorrect.every(v => v === true);
 
     if (allCorrect) {
+        for (let i = 1; i <= 12; i++) {
+            document.getElementById(`word${i}`).readOnly = true;
+        }
+        document.getElementById("submit").innerHTML = "🔓";
+        document.getElementById("submit").onclick = "location.href='/success'";
         alert("Success!");
-        location.href = "/success";
     }
 
 } // function checkAnswers
