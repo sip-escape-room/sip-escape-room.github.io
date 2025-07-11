@@ -40,7 +40,7 @@ input {
 }
 
 input:focus {
-    outline: thin solid;
+    outline: thin solid white;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -57,6 +57,18 @@ input:focus::-webkit-input-placeholder {
     border: none;
     background-color: #795bc5;
     color: white;
+    box-shadow: 0 6px #888;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #875ad5;
+}
+
+.button:active {
+    background-color: #875ad5;
+    box-shadow: 0 4px #666;
+    transform: translateY(2px);
 }
 
 </style>
@@ -70,47 +82,21 @@ input:focus::-webkit-input-placeholder {
         <h1>Enter your 12-Word Recovery Phrase</h1>
 
         <div class="rowA">
-
             <input type="text" id="word1" placeholder="1">
-            <span id="check1"></span>
-
             <input type="text" id="word2" placeholder="2">
-            <span id="check2"></span>
-
             <input type="text" id="word3" placeholder="3">
-            <span id="check3"></span>
-
             <input type="text" id="word4" placeholder="4">
-            <span id="check4"></span>
-
             <input type="text" id="word5" placeholder="5">
-            <span id="check5"></span>
-
             <input type="text" id="word6" placeholder="6">
-            <span id="check6"></span>
-
         </div><!-- end of rowA -->
 
         <div class="rowB">
-
             <input type="text" id="word7" placeholder="7">
-            <span id="check7"></span>
-
             <input type="text" id="word8" placeholder="8">
-            <span id="check8"></span>
-
             <input type="text" id="word9" placeholder="9">
-            <span id="check9"></span>
-
             <input type="text" id="word10" placeholder="10">
-            <span id="check10"></span>
-
             <input type="text" id="word11" placeholder="11">
-            <span id="check11"></span>
-
             <input type="text" id="word12" placeholder="12">
-            <span id="check12"></span>
-
         </div><!-- end of rowB -->
 
         <button class="button" onclick="checkAnswers()">Submit</button>
@@ -161,9 +147,9 @@ function checkAnswers() {
         if (wordElement) {
             let word = wordElement.value.toLowerCase();
             if (word == answer) {
-                wordElement.style.outline = "thin solid green";
+                wordElement.style.border = "solid LimeGreen";
             } else {
-                wordElement.style.outline = "thin solid red";
+                wordElement.style.border = "solid Red";
             }
         }
 
