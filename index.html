@@ -2,11 +2,56 @@
 <html>
 
 <head>
-    <title>Wallet</title>
+
+<title>Wallet</title>
+
+<style>
+
+body {
+    background-color: #121212;
+}
+
+.container {
+    margin: 30vh auto;
+    display: grid;
+}
+
+button {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 50px auto;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #536fd3;
+    color: white;
+    box-shadow: 0 6px #888;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #5a75d5;
+}
+
+button:active {
+    background-color: #5a75d5;
+    box-shadow: 0 4px #666;
+    transform: translateY(2px);
+}
+
+</style>
+
 </head>
 
 <body>
-    <button onclick="location.href='/wallet'">Click to open Digital Wallet</button>
+
+    <div class="container">
+
+        <button onclick="location.href='/wallet'">Click to open Digital Wallet</button>
+
+    </div>
+
 </body>
 
 </html>
