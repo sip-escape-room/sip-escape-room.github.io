@@ -113,7 +113,7 @@ input:focus::-webkit-input-placeholder {
 
         </div><!-- end of rowB -->
 
-        <button class="button" onclick="onSubmit()">Submit</button>
+        <button class="button" onclick="checkAnswers()">Submit</button>
 
     </div><!-- end of container -->
 
@@ -121,22 +121,8 @@ input:focus::-webkit-input-placeholder {
 
 <script>
 
-// ANSWERS HERE //
-const ans1 = 'one';
-const ans2 = 'two';
-const ans3 = 'three';
-const ans4 = 'four';
-const ans5 = 'five';
-const ans6 = 'six';
-const ans7 = 'seven';
-const ans8 = 'eight';
-const ans9 = 'nine';
-const ans10 = 'ten';
-const ans11 = 'eleven';
-const ans12 = 'twelve';
-// ANSWERS HERE //
-
-function onSubmit() {
+/*
+function checkNotEmpty() {
 
     let inputs = document.querySelectorAll("input");
 
@@ -156,25 +142,9 @@ function onSubmit() {
     }
 
 }
+*/
 
 function checkAnswers() {
-
-    /*
-    let w1 = document.getElementById("word1").value.toLowerCase();
-    let w2 = document.getElementById("word2").value.toLowerCase();
-    let w3 = document.getElementById("word3").value.toLowerCase();
-    let w4 = document.getElementById("word4").value.toLowerCase();
-    let w5 = document.getElementById("word5").value.toLowerCase();
-    let w6 = document.getElementById("word6").value.toLowerCase();
-    let w7 = document.getElementById("word7").value.toLowerCase();
-    let w8 = document.getElementById("word8").value.toLowerCase();
-    let w9 = document.getElementById("word9").value.toLowerCase();
-    let w10 = document.getElementById("word10").value.toLowerCase();
-    let w11 = document.getElementById("word11").value.toLowerCase();
-    let w12 = document.getElementById("word12").value.toLowerCase();
-    */
-
-    // MODIFIED CODE //
 
     const answers = [
         "one", "two", "three", "four", "five", "six", 
@@ -186,15 +156,10 @@ function checkAnswers() {
         const wordId = `word${i}`;
         const wordElement = document.getElementById(wordId);
 
-        const checkId = `check${i}`;
-        const checkElement = document.getElementById(checkId);
-
         let answer = answers[i - 1];
 
         if (wordElement) {
             let word = wordElement.value.toLowerCase();
-            console.log(word)
-            console.log(answer)
             if (word == answer) {
                 wordElement.style.outline = "thin solid green";
             } else {
@@ -202,85 +167,9 @@ function checkAnswers() {
             }
         }
 
-    }
+    } // for loop
 
-    // MODIFIED CODE //
-
-    /*
-    if (w1 == ans1) {
-        document.getElementById("check1").innerHTML = "✔️";
-    } else {
-        document.getElementById("check1").innerHTML = "❌";
-    }
-
-    if (w2 == ans2) {
-        document.getElementById("check2").innerHTML = "✔️";
-    } else {
-        document.getElementById("check2").innerHTML = "❌";
-    }
-
-    if (w3 == ans3) {
-        document.getElementById("check3").innerHTML = "✔️";
-    } else {
-        document.getElementById("check3").innerHTML = "❌";
-    }
-
-    if (w4 == ans4) {
-        document.getElementById("check4").innerHTML = "✔️";
-    } else {
-        document.getElementById("check4").innerHTML = "❌";
-    }
-
-    if (w5 == ans5) {
-        document.getElementById("check5").innerHTML = "✔️";
-    } else {
-        document.getElementById("check5").innerHTML = "❌";
-    }
-
-    if (w6 == ans6) {
-        document.getElementById("check6").innerHTML = "✔️";
-    } else {
-        document.getElementById("check6").innerHTML = "❌";
-    }
-
-    if (w7 == ans7) {
-        document.getElementById("check7").innerHTML = "✔️";
-    } else {
-        document.getElementById("check7").innerHTML = "❌";
-    }
-
-    if (w8 == ans8) {
-        document.getElementById("check8").innerHTML = "✔️";
-    } else {
-        document.getElementById("check8").innerHTML = "❌";
-    }
-
-    if (w9 == ans9) {
-        document.getElementById("check9").innerHTML = "✔️";
-    } else {
-        document.getElementById("check9").innerHTML = "❌";
-    }
-
-    if (w10 == ans10) {
-        document.getElementById("check10").innerHTML = "✔️";
-    } else {
-        document.getElementById("check10").innerHTML = "❌";
-    }
-
-    if (w11 == ans11) {
-        document.getElementById("check11").innerHTML = "✔️";
-    } else {
-        document.getElementById("check11").innerHTML = "❌";
-    }
-
-    if (w12 == ans12) {
-        document.getElementById("check12").innerHTML = "✔️";
-    } else {
-        document.getElementById("check12").innerHTML = "❌";
-    }
-    */
-
-}
+} // function checkAnswers
 
 </script>
 
