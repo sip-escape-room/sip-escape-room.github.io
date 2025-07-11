@@ -159,6 +159,7 @@ function onSubmit() {
 
 function checkAnswers() {
 
+    /*
     let w1 = document.getElementById("word1").value.toLowerCase();
     let w2 = document.getElementById("word2").value.toLowerCase();
     let w3 = document.getElementById("word3").value.toLowerCase();
@@ -171,9 +172,9 @@ function checkAnswers() {
     let w10 = document.getElementById("word10").value.toLowerCase();
     let w11 = document.getElementById("word11").value.toLowerCase();
     let w12 = document.getElementById("word12").value.toLowerCase();
+    */
 
     // MODIFIED CODE //
-    /*
 
     const answers = [
         "one", "two", "three", "four", "five", "six", 
@@ -195,17 +196,17 @@ function checkAnswers() {
             console.log(word)
             console.log(answer)
             if (word == answer) {
-                checkElement.innerHTML = "✔️";
+                wordElement.style.outline = "thin solid green";
             } else {
-                checkElement.innerHTML = "❌";
+                wordElement.style.outline = "thin solid red";
             }
         }
 
     }
 
-    */
     // MODIFIED CODE //
 
+    /*
     if (w1 == ans1) {
         document.getElementById("check1").innerHTML = "✔️";
     } else {
@@ -277,6 +278,7 @@ function checkAnswers() {
     } else {
         document.getElementById("check12").innerHTML = "❌";
     }
+    */
 
 }
 
