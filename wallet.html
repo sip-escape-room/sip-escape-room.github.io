@@ -132,9 +132,9 @@ function checkNotEmpty() {
     }
 
     if (emptyInputs) {
-        alert("There are empty input fields")
+        alert("There are empty input fields");
     } else {
-        checkAnswers()
+        checkAnswers();
     }
 
 }
@@ -145,6 +145,11 @@ function checkAnswers() {
     const answers = [
         "one", "two", "three", "four", "five", "six", 
         "seven", "eight", "nine", "ten", "eleven", "twelve"
+    ];
+
+    const isCorrect = [
+        false, false, false, false, false, false, 
+        false, false, false, false, false, false
     ];
 
     for (let i = 1; i <= 12; i++) {
@@ -158,12 +163,21 @@ function checkAnswers() {
             let word = wordElement.value.toLowerCase();
             if (word == answer) {
                 wordElement.style.border = "solid LimeGreen";
+                isCorrect[i - 1] = true;
             } else {
                 wordElement.style.border = "solid Red";
+                isCorrect[i - 1] = false;
             }
         }
 
     } // for loop
+
+    console.log(isCorrect);
+
+    let allCorrect = isCorrect.every(v => v === true);
+    console.log(allCorrect);
+    alert("Success!");
+    location.href = "/success";
 
 } // function checkAnswers
 
