@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Wallet</title>
+<title>Digital Wallet</title>
 
 <style>
 
@@ -14,10 +14,11 @@ body {
 h1 {
     text-align: center;
     color: white;
+    font-family: sans-serif;
 }
 
 .container {
-    margin: auto;
+    margin: 20vh auto;
     width: 80%;
     border-radius: 8px;
     background-color: #2b2b2b;
@@ -44,6 +45,18 @@ input:focus {
 
 input:focus::-webkit-input-placeholder {
     color: transparent;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 20px auto;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #795bc5;
+    color: white;
 }
 
 </style>
@@ -100,7 +113,7 @@ input:focus::-webkit-input-placeholder {
 
         </div><!-- end of rowB -->
 
-        <button onclick="onSubmit()">Submit</button>
+        <button class="button" onclick="onSubmit()">Submit</button>
 
     </div><!-- end of container -->
 
@@ -108,6 +121,7 @@ input:focus::-webkit-input-placeholder {
 
 <script>
 
+// ANSWERS HERE //
 const ans1 = 'one';
 const ans2 = 'two';
 const ans3 = 'three';
@@ -120,6 +134,7 @@ const ans9 = 'nine';
 const ans10 = 'ten';
 const ans11 = 'eleven';
 const ans12 = 'twelve';
+// ANSWERS HERE //
 
 function onSubmit() {
 
@@ -156,6 +171,40 @@ function checkAnswers() {
     let w10 = document.getElementById("word10").value.toLowerCase();
     let w11 = document.getElementById("word11").value.toLowerCase();
     let w12 = document.getElementById("word12").value.toLowerCase();
+
+    // MODIFIED CODE //
+    /*
+
+    const answers = [
+        "one", "two", "three", "four", "five", "six", 
+        "seven", "eight", "nine", "ten", "eleven", "twelve"
+    ];
+
+    for (let i = 1; i <= 12; i++) {
+
+        const wordId = `word${i}`;
+        const wordElement = document.getElementById(wordId);
+
+        const checkId = `check${i}`;
+        const checkElement = document.getElementById(checkId);
+
+        let answer = answers[i - 1];
+
+        if (wordElement) {
+            let word = wordElement.value.toLowerCase();
+            console.log(word)
+            console.log(answer)
+            if (word == answer) {
+                checkElement.innerHTML = "✔️";
+            } else {
+                checkElement.innerHTML = "❌";
+            }
+        }
+
+    }
+
+    */
+    // MODIFIED CODE //
 
     if (w1 == ans1) {
         document.getElementById("check1").innerHTML = "✔️";
